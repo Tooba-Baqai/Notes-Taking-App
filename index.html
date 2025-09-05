@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Taking App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .note-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .notes-list {
+            margin-top: 20px;
+        }
+        .note-item {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Notes Taking App</h1>
+        <textarea class="note-input" id="noteInput" rows="4" placeholder="Enter your note here..."></textarea>
+        <button class="btn" onclick="addNote()">Add Note</button>
+        <div class="notes-list" id="notesList"></div>
+    </div>
+
+    <script>
+        function addNote() {
+            const noteInput = document.getElementById('noteInput');
+            const notesList = document.getElementById('notesList');
+            
+            if (noteInput.value.trim() !== '') {
+                const noteDiv = document.createElement('div');
+                noteDiv.className = 'note-item';
+                noteDiv.innerHTML = `
+                    ${noteInput.value}
+                    <button class="btn" style="float: right; background-color: #f44336;" 
+                            onclick="this.parentElement.remove()">Delete</button>
+                `;
+                notesList.appendChild(noteDiv);
+                noteInput.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
