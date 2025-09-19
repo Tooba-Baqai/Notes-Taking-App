@@ -21,4 +21,12 @@ A simple Notes Taking App
    git branch -M main
    git push -u origin main --force
 
+1. Build the Docker Image
+docker build -t notes-taking-app:1.0.0 .
 
+2. Run the Docker Container
+docker run -d -p 8080:80 notes-taking-app:1.0.0
+
+After running this command, your application will be available at http://localhost:8080
+
+4. Push to Docker Hub
