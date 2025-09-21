@@ -7,7 +7,7 @@ A simple Notes Taking App
 # Group Memeber
  - Tooba Baqai (46489)-Team lead (Made an app and push it into github)
  - Manahil Abid (44556)-Member (Created a new branch and sent a pull request to team lead)
- - Faareha Raza Qadri(47431)-Member (Pull request and made branch and made changes in readme)
+ - Faareha Raza Qadri(47431)-Member (Pull request and Updated README file)
 
 ---
 
